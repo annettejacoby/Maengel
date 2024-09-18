@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mängelmeldung Formular</title>
+</head>
+<body>
+    <h1>Mängelmeldung</h1>
+    <form id="maengelForm" action="your_backend_endpoint_or_google_script_url" method="POST" enctype="multipart/form-data">
+        <label for="meldungsdatum">Meldungsdatum:</label><br>
+        <input type="date" id="meldungsdatum" name="meldungsdatum" required><br><br>
+
+        <label for="name">Name des Meldenden:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="wohnung">Wohnung:</label><br>
+        <input type="text" id="wohnung" name="wohnung" required><br><br>
+
+        <label for="ort">Ort in der Wohnung:</label><br>
+        <input type="text" id="ort" name="ort" required><br><br>
+
+        <label for="beschreibung">Beschreibung des Mangels:</label><br>
+        <textarea id="beschreibung" name="beschreibung" required></textarea><br><br>
+
+        <label for="dringlichkeit">Dringlichkeit (Hoch/Mittel/Niedrig):</label><br>
+        <select id="dringlichkeit" name="dringlichkeit">
+            <option value="Hoch">Hoch</option>
+            <option value="Mittel">Mittel</option>
+            <option value="Niedrig">Niedrig</option>
+        </select><br><br>
+
+        <label for="schwere">Schwere des Mangels:</label><br>
+        <select id="schwere" name="schwere">
+            <option value="Nur optisch">Nur optisch</option>
+            <option value="Beeinträchtigt Nutzung">Beeinträchtigt Nutzung</option>
+            <option value="Sicherheitsrelevant">Sicherheitsrelevant</option>
+        </select><br><br>
+
+        <label for="kontakt">Kontakt:</label><br>
+        <input type="email" id="kontakt" name="kontakt" required><br><br>
+
+        <label for="datum_auftreten">Datum des Auftretens des Mangels:</label><br>
+        <input type="date" id="datum_auftreten" name="datum_auftreten" required><br><br>
+
+        <label for="massnahmen">Bisherige Massnahmen:</label><br>
+        <textarea id="massnahmen" name="massnahmen"></textarea><br><br>
+
+        <label for="wiederholungsfall">Wiederholungsfall (Ja/Nein):</label><br>
+        <select id="wiederholungsfall" name="wiederholungsfall">
+            <option value="Ja">Ja</option>
+            <option value="Nein">Nein</option>
+        </select><br><br>
+
+        <label for="foto">Foto des Mangels:</label><br>
+        <input type="file" id="foto" name="foto"><br><br>
+
+        <label for="anmerkungen">Zusätzliche Anmerkungen:</label><br>
+        <textarea id="anmerkungen" name="anmerkungen"></textarea><br><br>
+
+        <!-- This is the submit button -->
+        <input type="submit" value="Absenden">
+    </form>
+
+    <script>
+        document.getElementById("maengelForm").onsubmit = function() {
+            alert("Mängelmeldung eingereicht!");
+        };
+    </script>
+</body>
+</html>
